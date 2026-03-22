@@ -1,0 +1,2 @@
+calıstırma 
+uvicorn main:app --reload
