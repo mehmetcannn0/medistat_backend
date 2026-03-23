@@ -137,6 +137,10 @@ async def calculate_stats(file: UploadFile = File(...), columns: str = Form(""),
     except Exception as e:
         print(f"Hata detayı: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
+        
+@app.get("/ping")
+async def ping():
+    return {"status": "awake"}
 
 if __name__ == "__main__":
     import uvicorn
